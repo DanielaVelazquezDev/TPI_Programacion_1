@@ -1,4 +1,4 @@
-# MÓDULO DE VALIDACIONES: validaciones.py
+# validaciones.py
 
 def solicitar_entero_positivo(mensaje):
     """Solicita un número entero por consola garantizando que sea válido y mayor a cero."""
