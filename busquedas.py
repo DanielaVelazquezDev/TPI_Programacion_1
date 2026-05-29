@@ -1,4 +1,4 @@
-# MÓDULO DE BÚSQUEDAS Y FILTROS: busquedas.py
+# busquedas.py
 
 def buscar_por_nombre(lista_paises, nombre_buscar):
     """
