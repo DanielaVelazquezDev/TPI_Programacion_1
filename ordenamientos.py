@@ -1,4 +1,4 @@
-# MÓDULO DE ORDENAMIENTO: ordenamientos.py
+# ordenamientos.py
 
 def ordenar_paises(lista_paises, clave, descendente=False):
     """
