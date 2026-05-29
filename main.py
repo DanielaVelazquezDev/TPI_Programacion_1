@@ -1,6 +1,4 @@
-# ==========================================
-# ARCHIVO PRINCIPAL: main.py
-# ==========================================
+# Archivo principal: main.py
 
 import os
 import sys
@@ -9,9 +7,7 @@ import busquedas
 import ordenamientos
 import estadisticas
 
-# ==========================================
-# 1) VALIDACIONES DE ENTRADA (BLINDAJE)
-# ==========================================
+# 1) Validacion de entrada
 
 def solicitar_entero_positivo(mensaje):
     """Solicita un número entero por consola garantizando que sea válido y mayor a cero."""
@@ -34,9 +30,7 @@ def solicitar_texto_obligatorio(mensaje):
         print("[Error] Este campo no puede quedar vacío.")
 
 
-# ==========================================
-# 2) VISTA DE INTERFAZ (CONSOLA)
-# ==========================================
+# 2) Vista de la interfaz
 
 def mostrar_tabla_real(lista):
     """Imprime el dataset o los resultados procesados en una tabla alineada."""
@@ -49,9 +43,7 @@ def mostrar_tabla_real(lista):
         print(f"{p['nombre']:<15} | {p['poblacion']:<12} | {p['superficie']:<16} | {p['continente']:<12}")
 
 
-# ==========================================
-# 3) ORQUESTADOR / MENÚ INTERACTIVO
-# ==========================================
+# 3) Menu interactivo
 
 def menu():
     # Carga inicial de datos reales desde paises.csv
@@ -71,14 +63,14 @@ def menu():
         print("8. Salir del programa")
         print("=======================================")
         
-        # Atrapamos cualquier interrupción o bug de teclado en la terminal
+        # Detenemos cualquier interrupción o bug de teclado 
         try:
             opcion = input("Seleccione una opción (1-8): ").strip()
         except (KeyboardInterrupt, Exception):
             print("\n\n[Aviso] Entrada interrumpida. Volviendo al menú...")
             continue
         
-        # --- OPCIÓN 1: AGREGAR PAÍS ---
+        # Opción 1: Agregar Pais
         if opcion == "1":
             print("\n--- AGREGAR NUEVO PAÍS ---")
             nombre = solicitar_texto_obligatorio("Nombre del país: ")
@@ -102,9 +94,9 @@ def menu():
             datos.guardar_datos(paises)
             print(f"¡Éxito! '{nombre}' fue guardado en el archivo.")
             
-        # --- OPCIÓN 2: ACTUALIZAR PAÍS ---
+        # Opción 2: Actualizar pais
         elif opcion == "2":
-            print("\n--- ACTUALIZAR POBLACIÓN Y SUPERFICIE ---")
+            print("\n--- ACTUALIZAR POBLACION Y SUPERFICIE ---")
             nombre_buscar = input("Ingrese el nombre exacto del país a modificar: ").strip()
             
             encontrado = None
@@ -120,23 +112,23 @@ def menu():
                 datos.guardar_datos(paises)
                 print("¡Datos actualizados y guardados con éxito!")
             else:
-                print("[Error] El país no fue encontrado. Verifique la ortografía.")
+                print("[Error] El pais no fue encontrado. Verifique la ortografía.")
             
-        # --- OPCIÓN 3: BUSCAR POR NOMBRE ---
+        # Opción 3: Buscar por nombre
         elif opcion == "3":
-            print("\n--- BUSCAR PAÍS POR NOMBRE ---")
+            print("\n--- BUSCAR PAIS POR NOMBRE ---")
             nombre_b = input("Ingrese el nombre (o fragmento) a buscar: ").strip()
             resultados = busquedas.buscar_por_nombre(paises, nombre_b)
             mostrar_tabla_real(resultados)
             
-        # --- OPCIÓN 4: FILTRAR DATASET ---
+        # Opción 4: Filtrar Dataset
         elif opcion == "4":
-            print("\n--- MÓDULO DE FILTRADOS ---")
+            print("\n--- MODULO DE FILTRADOS ---")
             print("1. Filtrar por Continente")
             print("2. Filtrar por Rango de Población")
             print("3. Filtrar por Rango de Superficie")
             
-            sub_opcion = input("Seleccione una opción de filtrado (1-3): ").strip()
+            sub_opcion = input("Seleccione una opcion de filtrado (1-3): ").strip()
             
             if sub_opcion == "1":
                 cont_b = input("Ingrese el continente a filtrar: ").strip()
@@ -154,7 +146,7 @@ def menu():
             else:
                 print("[Error] Opción de filtrado inválida.")
                 
-        # --- OPCIÓN 5: ORDENAMIENTOS ---
+        # Opción 5: Ordenamiento
         elif opcion == "5":
             print("\n--- MÓDULO DE ORDENAMIENTOS ---")
             print("1. Ordenar por Nombre")
@@ -184,9 +176,9 @@ def menu():
             print(f"\n[Resultados ordenados por {clave.capitalize()}]")
             mostrar_tabla_real(resultados)
             
-        # --- OPCIÓN 6: ESTADÍSTICAS ---
+        #  Opción 6: Estadisticas
         elif opcion == "6":
-            print("\n--- MÓDULO DE ESTADÍSTICAS ANALÍTICAS ---")
+            print("\n--- MODULO DE ESTADISTICAS ANALITICAS ---")
             stats = estadisticas.calcular_indicators(paises)
             
             if not stats:
@@ -203,17 +195,17 @@ def menu():
             print(f"- Mayor Superficie: {stats['pais_max_superficie']['nombre']} ({stats['pais_max_superficie']['superficie']:,} km²)")
             print(f"- Menor Superficie: {stats['pais_min_superficie']['nombre']} ({stats['pais_min_superficie']['superficie']:,} km²)")
             
-            print(f"\n🗺️ DISTRIBUCIÓN POR CONTINENTE:")
+            print(f"\n🗺️ DISTRIBUCION POR CONTINENTE:")
             conteos = estadisticas.conteo_por_continente(paises)
             for cont, cant in conteos.items():
                 print(f"- {cont}: {cant} país(es)")
             
-        # --- OPCIÓN 7: LISTAR TODO ---
+        # Opción 7: Listar todo
         elif opcion == "7":
-            print("\n--- LISTADO ACTUAL DE PAÍSES (paises.csv) ---")
+            print("\n--- LISTADO ACTUAL DE PAISES (paises.csv) ---")
             mostrar_tabla_real(paises)
             
-        # --- OPCIÓN 8: SALIDA ---
+        # Opción 8: Salida
         elif opcion == "8":
             print("\n¡Gracias por usar el sistema! Saliendo de forma segura...")
             os._exit(0)
