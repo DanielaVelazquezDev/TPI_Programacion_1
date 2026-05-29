@@ -1,5 +1,5 @@
 # Trabajo Práctico Integrador - Programación 1
-### Gestión de Datos de Países en Python: filtros, ordenamientos y estadísticas
+### Gestión de Datos de Países 
 
 ## Integrantes
 * **Daniela Esther Velazquez** (Desarrollo y Resolución Individual)
@@ -7,11 +7,11 @@
 
 ## Institucion 
 * **Universidad:** Universidad Tecnológica Nacional 
-* **Carrera:** Tecnicatura Universitaria en Programación 
+* **Carrera:** Tecnicatura Universitaria en Programación a distancia
 
 
 ## Descripción del Proyecto
-Este sistema es una aplicación de consola desarrollada en Python 3.x que permite gestionar de manera integral un dataset de países. El programa lee, procesa y persiste los datos utilizando un archivo de formato abierto (`.csv`), implementando búsquedas dinámicas, filtros avanzados, ordenamientos eficientes y un módulo de analítica estadística.
+Este sistema es una aplicación de consola desarrollada en Python 3.x que permite gestionar de manera integral un dataset de países. El programa lee, procesa y persiste los datos utilizando un archivo de formato abierto (.csv), implementando búsquedas dinámicas, filtros avanzados, ordenamientos eficientes y un módulo de analítica estadística.
 
 El objetivo principal es aplicar de manera práctica los conceptos de **modularización**, **estructuras de datos compuestas** (listas de diccionarios), **control de excepciones** y **persistencia de datos**.
 
