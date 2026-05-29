@@ -1,24 +1,24 @@
-# Trabajo Práctico Integrador (TPI) - Programación 1
+# Trabajo Práctico Integrador - Programación 1
 ### Gestión de Datos de Países en Python: filtros, ordenamientos y estadísticas
 
-## 👥 Integrantes
+## Integrantes
 * **Daniela Esther Velazquez** (Desarrollo y Resolución Individual)
 * **Nota de entrega:** El proyecto fue planificado inicialmente para ser desarrollado en equipo, pero ante la falta de comunicación y respuesta del compañero asignado, se asumió la totalidad del diseño, codificación y documentación de forma individual para garantizar los criterios de calidad académica.
 
-## 🏫 Datos Institucionales
+## Datos Institucionales
 * **Universidad:** Universidad Tecnológica Nacional 
 * **Carrera:** Tecnicatura Universitaria en Programación 
 
 ---
 
-## 📋 Descripción del Proyecto
+## Descripción del Proyecto
 Este sistema es una aplicación de consola desarrollada en Python 3.x que permite gestionar de manera integral un dataset de países. El programa lee, procesa y persiste los datos utilizando un archivo de formato abierto (`.csv`), implementando búsquedas dinámicas, filtros avanzados, ordenamientos eficientes y un módulo de analítica estadística.
 
 El objetivo principal es aplicar de manera práctica los conceptos de **modularización**, **estructuras de datos compuestas** (listas de diccionarios), **control de excepciones** y **persistencia de datos**.
 
 ---
 
-## 📂 Estructura del Repositorio
+## Estructura del Repositorio
 El código fuente se encuentra estrictamente modularizado bajo el principio de responsabilidad única:
 
 * `main.py`: Punto de entrada de la aplicación. Maneja el menú interactivo por consola y la orquestación de los módulos.
