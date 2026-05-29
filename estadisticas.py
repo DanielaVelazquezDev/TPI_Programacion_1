@@ -1,4 +1,4 @@
-# MÓDULO DE ANALÍTICA: estadisticas.py
+# estadisticas.py
 
 def calcular_indicadores(lista_paises):
     """Calcula el promedio, máximos y mínimos de población y superficie."""
