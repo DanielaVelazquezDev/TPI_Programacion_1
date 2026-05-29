@@ -37,4 +37,4 @@ Para ejecutar el sistema de manera local, asegúrese de tener instalado **Python
 
 1. Clone el repositorio o descargue los archivos en una carpeta local:
    ```bash
-   git clone [LINK_DE_TU_REPOSITORIO]
+   git clone [https://github.com/DanielaVelazquezDev/TPI_Programacion_1.git]
