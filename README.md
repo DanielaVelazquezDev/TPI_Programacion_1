@@ -5,7 +5,7 @@
 * **Daniela Esther Velazquez** (Desarrollo y Resolución Individual)
 * **Nota de entrega:** El proyecto fue planificado inicialmente para ser desarrollado en equipo, pero ante la falta de comunicación y respuesta del compañero asignado, se asumió la totalidad del diseño, codificación y documentación de forma individual para garantizar los criterios de calidad académica.
 
-## Institucion 
+## Institución
 * **Universidad:** Universidad Tecnológica Nacional 
 * **Carrera:** Tecnicatura Universitaria en Programación a distancia
 
